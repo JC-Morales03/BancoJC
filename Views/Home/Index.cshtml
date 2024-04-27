@@ -1,8 +1,22 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model IEnumerable<BancoJC.Models.CuentaBancaria>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2>Listado de Cuentas Bancarias</h2>
+
+@if (Model != null && Model.Any())
+{
+    <table>
+        @foreach (var cuenta in Model)
+        {
+            <tr>
+                <td>@cuenta.NombreTitular</td>
+                <td>@cuenta.TipoCuenta</td>
+                <td>@cuenta.SaldoInicial</td>
+                <td>@cuenta.Email</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p>No se encontraron cuentas bancarias.</p>
+}
