@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BancoJC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bf286d6a5df88268d5f58dc1119b31f69ba69b4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f24c00c8d2b2928341b9993e9c7b1e5cc5c5c08")]
 [assembly: System.Reflection.AssemblyProductAttribute("BancoJC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BancoJC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
