@@ -1,22 +1,32 @@
-﻿@model IEnumerable<BancoJC.Models.CuentaBancaria>
-
-<h2>Listado de Cuentas Bancarias</h2>
+﻿
+@model IEnumerable<BancoJC.Models.CuentaBancaria>
 
 @if (Model != null && Model.Any())
 {
-    <table>
-        @foreach (var cuenta in Model)
-        {
-            <tr>
-                <td>@cuenta.NombreTitular</td>
+<table>
+    <tr>
+        <th>Nombre del Titular: </th>
+        <th>Tipo de Cuenta: </th>
+        <th>Saldo Inicial: </th>
+        <th>Email: </th>
+    </tr>
+    @foreach (var cuenta in Model)
+    {
+        <tr>
+            <td>@cuenta.NombreTitular</td>
                 <td>@cuenta.TipoCuenta</td>
                 <td>@cuenta.SaldoInicial</td>
                 <td>@cuenta.Email</td>
-            </tr>
-        }
-    </table>
+            <td>
+                <!-- Añade aquí cualquier opción como editar o eliminar -->
+                <a href="@Url.Action("Edit", "Usuarios", new { id = cuenta.Id })">Editar</a>
+                <a href="@Url.Action("Delete", "Usuarios", new { id = cuenta.Id })">Eliminar</a>
+            </td>
+        </tr>
+    }
+</table>
 }
 else
 {
-    <p>No se encontraron cuentas bancarias.</p>
+    <p>No se encontraron usuarios.</p>
 }
